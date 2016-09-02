@@ -7,12 +7,13 @@ public class BMICalculator {
         System.out.println("Podaj wzrost");
         Scanner klaw = new Scanner(System.in);
         /* do czytaniazklawiatury */
-        float wzrost = klaw.nextInt();
+        String wzrost = klaw.next();
+        wczytajWzrost(wzrost);
 
         System.out.println("Podaj wage");
         float waga = klaw.nextInt();
 
-        float bmi = waga / wzrost; //masa/wzrost(m)^2
+        float bmi = waga / 3; //masa/wzrost(m)^2
 
         System.out.println ("Twoje bmi=");
         System.out.println(bmi);
@@ -21,7 +22,15 @@ public class BMICalculator {
 
     }
 
-    public static void wczytajWzrost (String wzrost){
+    public static void wczytajWzrost (String wzrost)
+    {
+        if (wzrost.charAt(0)=='1'){
+            System.out.println("wzrost poprawny");
+        } else if (wzrost.charAt(0)=='2'){
+            System.out.println("jestes wysoki");
+        } else {
+            System.out.println("bład");
+        }
 
     }
 }
