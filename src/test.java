@@ -13,8 +13,11 @@ public class test {
         }
         x = z;
 
-        if (true) {
 
+        if (true) {
+            return;
+        } else {
+            return;
         }
     }
 }

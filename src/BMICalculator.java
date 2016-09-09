@@ -16,11 +16,21 @@ public class BMICalculator {
             if (poprawnyWzrost){ test = false;
             wzrostWMetrach = Float.parseFloat(wzrost);}
         }
-        wzrostWMetrach = wzrostWMetrach / 100;
+                wzrostWMetrach = wzrostWMetrach / 100;
         System.out.println("Podaj wage");
-        float waga = klaw.nextInt();
 
-        float bmi = waga / (wzrostWMetrach * wzrostWMetrach); //masa/wzrost(m)^2
+        test = true;
+        float wagaWLiczbie = 0;
+        while (test){
+            String waga = klaw.next();
+            boolean poprawnaWaga = wczytajWage(waga);
+        if (poprawnaWaga) {
+            test = false;
+            wagaWLiczbie =Float.parseFloat(waga);
+        }}
+
+
+        float bmi = wagaWLiczbie / (wzrostWMetrach * wzrostWMetrach); //masa/wzrost(m)^2
 
         System.out.println("Twoje bmi=");
         System.out.println(bmi);
@@ -28,6 +38,26 @@ public class BMICalculator {
 
 
     }
+    public static boolean wczytajWage(String waga){
+        if (waga.length() <2 || waga.length()>3) {
+            System.out.println("bład");
+            return false;
+                    }
+                    if (waga.charAt(0) < '0'|| waga.charAt(0) > '9'){
+                        System.out.println("blad");
+                        return false;
+                    }
+    if (waga.charAt(1) < '0' || waga.charAt(1) > '9'){
+        System.out.println("blad");
+        return false;
+    }
+ if ( waga.length() == 3 && (waga.charAt(2) <'0' || waga.charAt(2)>'9')){
+     System.out.println("blad");
+     return false;
+ }
+ return true;
+    }
+
 
     public static boolean wczytajWzrost(String wzrost) {
         if (wzrost.length() != 3) {
