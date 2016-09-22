@@ -20,7 +20,7 @@ public class KolkoIKrzyzyk {
                 break;
             }
 
-
+/* ctrl + k -> ctrl shift k */
 
             System.out.println("gracz O wybierz pole");
             numerPola = czytanie.nextInt();
