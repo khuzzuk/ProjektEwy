@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class KolkoIKrzyzyk {
     public static void main(String[] args) {
  String [] tablica = new String[9] ;
@@ -8,19 +7,17 @@ public class KolkoIKrzyzyk {
         tablica [6] = "6"; tablica [7] = "7"; tablica [8] = "8";
         drukPlanszy(tablica);
 
-        boolean zwyciestwo = true;
-        while (zwyciestwo) {
+        boolean kontynuacja = true;
+        while (kontynuacja) {
             System.out.println("gracz x wybierz pole");
-            Scanner czytanie= new Scanner(System.in);
+            Scanner czytanie = new Scanner(System.in);
             int numerPola = czytanie.nextInt();
             tablica [numerPola] = "X";
             drukPlanszy(tablica);
 
-            if (tablica [0] == "X" ||tablica [0] == "O"){
+            if (czyWygral(tablica, "X")){
                 break;
             }
-
-/* ctrl + k -> ctrl shift k */
 
             System.out.println("gracz O wybierz pole");
             numerPola = czytanie.nextInt();
@@ -28,7 +25,6 @@ public class KolkoIKrzyzyk {
             drukPlanszy(tablica);
         }
     }
-
     public static void drukPlanszy(String[] tablica) {
         System.out.print( tablica [0]);
         System.out.print("|");
@@ -46,4 +42,39 @@ public class KolkoIKrzyzyk {
         System.out.print("|");
         System.out.println(tablica [8]);
     }
+
+    public static boolean czyWygral(String[] tablica, String symbolGracza) {
+        if (tablica [0] == symbolGracza && tablica [1] == symbolGracza && tablica [2] == symbolGracza){
+            System.out.println("X zwyciezyles");
+            return true;
+        }
+        if (tablica [3] == symbolGracza && tablica [4] == symbolGracza && tablica [5] == symbolGracza){
+            System.out.println("X zwyciezyles");
+            return true;
+        }
+if (tablica [6] == symbolGracza && tablica [7] == symbolGracza && tablica [8] == symbolGracza) {
+    System.out.println("X zwyciężyłeś");
+    return true;
 }
+
+if (tablica [0] == symbolGracza && tablica [3] == symbolGracza && tablica [6]== symbolGracza){
+    System.out.println("X zwyciężyłeś");
+    return true;
+}
+if (tablica [1] == symbolGracza && tablica [4] == symbolGracza && tablica [7] == symbolGracza){
+    System.out.println("X zwyciezyles");
+    return true;
+}
+if (tablica [2] == symbolGracza && tablica [5] == symbolGracza && tablica [8] == symbolGracza){
+    System.out.println("X zwyciezyles");
+    return true;
+}
+if (tablica [0] == symbolGracza && tablica[4] == symbolGracza && tablica [8] == symbolGracza){
+    System.out.println("X zwyciezyles");
+    return true;
+}
+return false;
+    }
+
+}
+/* ctrl + k -> ctrl shift k */
