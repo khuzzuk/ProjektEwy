@@ -30,6 +30,9 @@ public class KolkoIKrzyzyk {
             numerPola = czytanie.nextInt();
             tablica[numerPola] = "O";
             drukPlanszy(tablica);
+            if (czyWygral(tablica, "O")){
+                break;
+            }
         }
     }
 
@@ -65,8 +68,8 @@ public class KolkoIKrzyzyk {
             return true;
         }
 
-        if (tablica[0] == symbolGracza && tablica[3] == symbolGracza && tablica[6] == symbolGracza) {
-            System.out.println("X zwyciężyłeś");
+        if (tablica[0].equals(symbolGracza) && tablica[3] == symbolGracza && tablica[6] == symbolGracza) {
+            System.out.println (symbolGracza + " zwyciężyłeś");
             return true;
         }
         if (tablica[1] == symbolGracza && tablica[4] == symbolGracza && tablica[7] == symbolGracza) {
