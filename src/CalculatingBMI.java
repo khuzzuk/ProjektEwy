@@ -25,6 +25,8 @@ public void actionPerformed (ActionEvent akcja) {
         drugieOkienko.setLayout(layout);
         JLabel tekst = new JLabel("Ewa jest fantastyczna");
         drugieOkienko.add(tekst);
+    float bmi = 170/50;
+    JLabel tekstBmi = new JLabel(bmi);
         drugieOkienko.setVisible(true);
     }
 
