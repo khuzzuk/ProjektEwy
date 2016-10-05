@@ -9,7 +9,7 @@ public class BMIWithGui {
 
         okienkoDlaAdrianka.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container contentPane = okienkoDlaAdrianka.getContentPane();
-        contentPane.setBackground(new Color(245,247,255));
+        contentPane.setBackground(new Color(201, 239,255));
         Dimension dim = new Dimension();
         dim.setSize(800, 800);
         okienkoDlaAdrianka.setMinimumSize(dim);
