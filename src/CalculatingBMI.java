@@ -17,7 +17,6 @@ public void actionPerformed (ActionEvent akcja) {
         JFrame drugieOkienko = new JFrame();
         GridBagConstraints ramy = new GridBagConstraints();
         GridBagLayout layout = new GridBagLayout();
-        drugieOkienko.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container contentPane = drugieOkienko.getContentPane();
         contentPane.setBackground(new Color(230,7,10));
         Dimension dim = new Dimension();
