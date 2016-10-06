@@ -12,22 +12,22 @@ import java.awt.event.ActionEvent;
 
 }
 */
-    public class CalculatingBMI extends AbstractAction{
-public void actionPerformed (ActionEvent akcja) {
+public class CalculatingBMI extends AbstractAction {
+    public void actionPerformed(ActionEvent akcja) {
         JFrame drugieOkienko = new JFrame();
         GridBagConstraints ramy = new GridBagConstraints();
         GridBagLayout layout = new GridBagLayout();
         Container contentPane = drugieOkienko.getContentPane();
-        contentPane.setBackground(new Color(230,7,10));
+        contentPane.setBackground(new Color(230, 7, 10));
         Dimension dim = new Dimension();
         dim.setSize(400, 400);
         drugieOkienko.setMinimumSize(dim);
         drugieOkienko.setLayout(layout);
         JLabel tekst = new JLabel("Ewa jest fantastyczna");
         drugieOkienko.add(tekst);
-    float bmi = 170/50;
-    JLabel tekstBmi = new JLabel(bmi);
+        float bmi = 170 / 50;
+        JLabel tekstBmi = new JLabel(Float.toString(bmi));
         drugieOkienko.setVisible(true);
     }
 
-    }
+}
